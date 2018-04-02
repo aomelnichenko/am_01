@@ -4,9 +4,10 @@ public class Main {
         System.out.println("Hello World!");
         System.out.println("Helloss World!");
         System.out.println("Hello sWorld!");
-        System.out.println("Hello sWorld!");
-        System.out.println("Hello Wsorld!");
+        System.out.println("Hello sWorlasdasdasdd!");
+        System.out.println("Helasdasdasdasdasdlo Wsorld!");
         System.out.println("Hssssssssssssello Wsorld!");
+
     }
     //fdghj
     //asdfghjk
