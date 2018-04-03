@@ -14,6 +14,8 @@ public class Main {
 
         System.out.println("ddi3");
 
+
+        System.out.println("new");
     }
     //fdghj
     //asdfghjk
