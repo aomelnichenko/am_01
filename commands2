@@ -1,0 +1,300 @@
+Switched to branch 'master'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git merge i2
+Updating b58a937..31f62ef
+Fast-forward
+ am_01/src/Main.java | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+c:\test\am_01\src>git checkout master
+Already on 'master'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git checkout i3
+Switched to branch 'i3'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git checkout master
+Switched to branch 'master'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git merge i3
+error: Your local changes to the following files would be overwritten by merge:
+        am_01/src/h.java
+Please commit your changes or stash them before you merge.
+Aborting
+
+c:\test\am_01\src>git merge i3
+Auto-merging am_01/src/Main.java
+Merge made by the 'recursive' strategy.
+ am_01/src/Main.java | 3 +++
+ am_01/src/i3.java   | 5 +++++
+ 2 files changed, 8 insertions(+)
+ create mode 100644 am_01/src/i3.java
+
+c:\test\am_01\src>git reset hard 403e079
+fatal: ambiguous argument 'hard': unknown revision or path not in the working tr
+ee.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+c:\test\am_01\src>git reset --hard 403e079
+HEAD is now at 403e079 gss
+
+c:\test\am_01\src>git merge i3
+Updating 403e079..509f925
+Fast-forward
+ am_01/src/Main.java | 3 +++
+ am_01/src/i3.java   | 5 +++++
+ 2 files changed, 8 insertions(+)
+ create mode 100644 am_01/src/i3.java
+
+c:\test\am_01\src>git reset --hard 4febadb
+HEAD is now at 4febadb gssss
+
+c:\test\am_01\src>git branch -D i3
+Deleted branch i3 (was 509f925).
+
+c:\test\am_01\src>cd..
+
+c:\test\am_01>cd..
+
+c:\test>git branch a1
+
+c:\test>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   am_01/.idea/workspace.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+c:\test>git checkout a1
+Switched to branch 'a1'
+M       am_01/.idea/workspace.xml
+
+c:\test>git add sy.css
+
+c:\test>git commit -m 'sy'
+[a1 840001f] 'sy'
+ 1 file changed, 4 insertions(+)
+ create mode 100644 sy.css
+
+c:\test>git checkout master
+Switched to branch 'master'
+M       am_01/.idea/workspace.xml
+
+c:\test>git marge a1
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+c:\test>git merge a1
+Updating 4febadb..840001f
+Fast-forward
+ sy.css | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 sy.css
+
+c:\test>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   am_01/.idea/workspace.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+c:\test>git remote add origin https://github.com/aomelnichenko/am_01.git
+
+c:\test>git push -u origin master
+Username for 'https://github.com': aomelnichenko
+Password for 'https://aomelnichenko@github.com':
+Counting objects: 71, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (63/63), done.
+Writing objects: 100% (71/71), 11.80 KiB | 1006.00 KiB/s, done.
+Total 71 (delta 22), reused 0 (delta 0)
+remote: Resolving deltas: 100% (22/22), done.
+To https://github.com/aomelnichenko/am_01.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+c:\test>git add sy1.css
+
+c:\test>git commit -m 'sy'
+[master c54df87] 'sy'
+ 1 file changed, 4 insertions(+)
+ create mode 100644 sy1.css
+
+c:\test>git reset push
+fatal: ambiguous argument 'push': unknown revision or path not in the working tr
+ee.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+c:\test>git push
+Username for 'https://github.com': aomelnichenko
+Password for 'https://aomelnichenko@github.com':
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 233 bytes | 233.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/aomelnichenko/am_01.git
+   840001f..c54df87  master -> master
+
+c:\test>git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/aomelnichenko/am_01
+   c54df87..85bc3a4  master     -> origin/master
+Updating c54df87..85bc3a4
+Fast-forward
+ sy1.css | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+c:\test>git push
+Username for 'https://github.com': aomelnichenko
+Password for 'https://aomelnichenko@github.com':
+Everything up-to-date
+
+c:\test>cd am_02
+
+c:\test\am_02>git commit -m 'sy'
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+        modified:   index.html
+
+Untracked files:
+        .idea/
+
+no changes added to commit
+
+c:\test\am_02>git add index.html
+
+c:\test\am_02>git commit -m 'sy'
+[master ac1b4f5] 'sy'
+ 1 file changed, 3 insertions(+)
+
+c:\test\am_02>git push
+Username for 'https://github.com': amelnichenko
+Password for 'https://amelnichenko@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/aomelnichenko/am_01.git/'
+
+c:\test\am_02>git push
+Username for 'https://github.com': amelnichenko
+Password for 'https://amelnichenko@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/aomelnichenko/am_01.git/'
+
+c:\test\am_02>git push
+Username for 'https://github.com': aomelnichenko
+Password for 'https://aomelnichenko@github.com':
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.03 KiB | 350.00 KiB/s, done.
+Total 11 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+To https://github.com/aomelnichenko/am_01.git
+   85bc3a4..ac1b4f5  master -> master
+
+c:\test\am_02>git branch am3
+
+c:\test\am_02>git checkout am3
+Switched to branch 'am3'
+
+c:\test\am_02>git commit -m 'sy'
+On branch am3
+Changes not staged for commit:
+        modified:   qwert.txt
+
+Untracked files:
+        .idea/
+
+no changes added to commit
+
+c:\test\am_02>git add qwert.txt
+
+c:\test\am_02>git commit -m 'sy'
+[am3 a3d47a2] 'sy'
+ 1 file changed, 1 insertion(+)
+
+c:\test\am_02>git add qwert.txt
+
+c:\test\am_02>git commit -m 'sy'
+[am3 555d9f3] 'sy'
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+c:\test\am_02>git push am3
+fatal: 'am3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+c:\test\am_02>git push -u origin am3
+Username for 'https://github.com': aomelnichenko
+Password for 'https://aomelnichenko@github.com':
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 515 bytes | 515.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/aomelnichenko/am_01.git
+ * [new branch]      am3 -> am3
+Branch 'am3' set up to track remote branch 'am3' from 'origin'.
+
+c:\test\am_02>git push -u origin master
+Username for 'https://github.com': aomelnichenko
+Password for 'https://aomelnichenko@github.com':
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+c:\test\am_02>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+c:\test\am_02>git merge am3
+Updating 1995c07..5470632
+Fast-forward
+ qwert.txt | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+c:\test\am_02>git add qwert.txt
+
+c:\test\am_02>git commit -m 'sy'
+[master 747a50e] 'sy'
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+c:\test\am_02>git push
+Username for 'https://github.com': aomelnichenko
+Password for 'https://aomelnichenko@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/aomelnichenko/am_01.git
+   1995c07..747a50e  master -> master
+
+c:\test\am_02>
