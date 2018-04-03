@@ -1,0 +1,300 @@
+'git <command> [<revision>...] -- [<file>...]'
+
+c:\test>git show 01941a6532ca636cc3891cf71bf1e6bd85430a4e
+commit 01941a6532ca636cc3891cf71bf1e6bd85430a4e
+Author: michaelivashko <maivashko@gmail.com>
+Date:   Mon Apr 2 15:03:07 2018 +0300
+
+    '1'
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..5137ce3
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,8 @@
++<html>
++<head>
++    <title>Hello gt</title>
++</head>
++<body>
++    First git repo
++</body>
++</html>
+\ No newline at end of file
+
+c:\test>CD am_o1/src
+The system cannot find the path specified.
+
+c:\test>CD am_o1
+The system cannot find the path specified.
+
+c:\test>CD am_01/src
+
+c:\test\am_01\src>git add ssss.java
+
+c:\test\am_01\src>git commit -m '3'
+[master 2d8742d] '3'
+ 2 files changed, 12 insertions(+)
+ create mode 100644 am_01/.idea/vcs.xml
+ create mode 100644 am_01/src/ssss.java
+
+c:\test\am_01\src>git diff
+diff --git a/am_01/src/ssss.java b/am_01/src/ssss.java
+index c2062e4..9143ce4 100644
+--- a/am_01/src/ssss.java
++++ b/am_01/src/ssss.java
+@@ -3,4 +3,5 @@
+  */
+ public class ssss {
+     //jjjjjmkkkk
++    //asdsd
+ }
+
+c:\test\am_01\src>git add test
+fatal: pathspec 'test' did not match any files
+
+c:\test\am_01\src>cd test
+The system cannot find the path specified.
+
+c:\test\am_01\src>cd ..
+
+c:\test\am_01>cd C:
+c:\test\am_01
+
+c:\test\am_01>cd -
+The system cannot find the path specified.
+
+c:\test\am_01>cd..
+
+c:\test>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+c:\test>git add test
+fatal: pathspec 'test' did not match any files
+
+c:\test>git add style.css
+
+c:\test>git commit -m '4'
+[master b6cb04b] '4'
+ 1 file changed, 4 insertions(+)
+ create mode 100644 style.css
+
+c:\test>git branch js-feature
+
+c:\test>git checkout js-feature
+Switched to branch 'js-feature'
+M       am_01/src/ssss.java
+
+c:\test>git branch title-fix
+
+c:\test>git checkout title-fix
+Switched to branch 'title-fix'
+M       am_01/src/ssss.java
+
+c:\test>git commit -m 'tf1'
+On branch title-fix
+Changes not staged for commit:
+        modified:   am_01/src/ssss.java
+        modified:   index.html
+
+Untracked files:
+        am_01/.idea/compiler.xml
+        am_01/.idea/copyright/
+        am_01/.idea/misc.xml
+        am_01/.idea/modules.xml
+        am_01/.idea/workspace.xml
+        am_01/am_01.iml
+        am_01/fsadass
+
+no changes added to commit
+
+c:\test>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+c:\test>git status
+On branch title-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   am_01/src/ssss.java
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        am_01/.idea/compiler.xml
+        am_01/.idea/copyright/
+        am_01/.idea/misc.xml
+        am_01/.idea/modules.xml
+        am_01/.idea/workspace.xml
+        am_01/am_01.iml
+        am_01/fsadass
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+c:\test>git add *
+warning: LF will be replaced by CRLF in am_01/.idea/compiler.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in am_01/.idea/misc.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in am_01/.idea/modules.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in am_01/.idea/workspace.xml.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in am_01/am_01.iml.
+The file will have its original line endings in your working directory.
+
+c:\test>git commit -m 'tf1'
+[title-fix 50088b5] 'tf1'
+ 9 files changed, 818 insertions(+), 1 deletion(-)
+ create mode 100644 am_01/.idea/compiler.xml
+ create mode 100644 am_01/.idea/copyright/profiles_settings.xml
+ create mode 100644 am_01/.idea/misc.xml
+ create mode 100644 am_01/.idea/modules.xml
+ create mode 100644 am_01/.idea/workspace.xml
+ create mode 100644 am_01/am_01.iml
+ create mode 100644 am_01/fsadass
+
+c:\test>git checkout master
+error: Your local changes to the following files would be overwritten by checkou
+t:
+        index.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+c:\test>git commit -m 'tf1'
+On branch title-fix
+Changes not staged for commit:
+        modified:   index.html
+
+no changes added to commit
+
+c:\test>git add index.html
+
+c:\test>git commit -m 'tf1'
+[title-fix d3cd39a] 'tf1'
+ 1 file changed, 1 insertion(+)
+
+c:\test>git checkout master
+Switched to branch 'master'
+
+c:\test>git add index.html
+
+c:\test>git commit -m 'm1'
+[master 0b1989b] 'm1'
+ 1 file changed, 1 insertion(+)
+
+c:\test>git merge index.htm
+merge: index.htm - not something we can merge
+
+c:\test>git merge title-fix
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+c:\test>git merge title-fix
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+c:\test>git add index.html
+
+c:\test>git commit -m 'm2'
+[master b58a937] 'm2'
+
+c:\test>git merge title-fix
+Already up to date.
+
+c:\test>cd am_01
+
+c:\test\am_01>git checkout i2
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  71acdba g
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 71acdba
+
+Switched to branch 'i2'
+M       am_01/.idea/workspace.xml
+
+c:\test\am_01>cd src
+
+c:\test\am_01\src>git checkout i2
+Already on 'i2'
+M       am_01/.idea/workspace.xml
+
+c:\test\am_01\src>git checkout i2
+Already on 'i2'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git checkout master
+Switched to branch 'master'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git merge i2
+Updating b58a937..31f62ef
+Fast-forward
+ am_01/src/Main.java | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+c:\test\am_01\src>git checkout master
+Already on 'master'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git checkout i3
+Switched to branch 'i3'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git checkout master
+Switched to branch 'master'
+M       am_01/.idea/workspace.xml
+A       am_01/src/h.java
+
+c:\test\am_01\src>git merge i3
+error: Your local changes to the following files would be overwritten by merge:
+        am_01/src/h.java
+Please commit your changes or stash them before you merge.
+Aborting
+
+c:\test\am_01\src>git merge i3
+Auto-merging am_01/src/Main.java
+Merge made by the 'recursive' strategy.
+ am_01/src/Main.java | 3 +++
+ am_01/src/i3.java   | 5 +++++
+ 2 files changed, 8 insertions(+)
+ create mode 100644 am_01/src/i3.java
+
+c:\test\am_01\src>git reset hard 403e079
+fatal: ambiguous argument 'hard': unknown revision or path not in the working tr
+ee.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+c:\test\am_01\src>git reset --hard 403e079
+HEAD is now at 403e079 gss
+
+c:\test\am_01\src>git merge i3
+Updating 403e079..509f925
+Fast-forward
+ am_01/src/Main.java | 3 +++
+ am_01/src/i3.java   | 5 +++++
+ 2 files changed, 8 insertions(+)
+ create mode 100644 am_01/src/i3.java
+
+c:\test\am_01\src>git reset --hard 4febadb
+HEAD is now at 4febadb gssss
+
+c:\test\am_01\src>
